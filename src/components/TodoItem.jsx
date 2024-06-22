@@ -8,7 +8,9 @@ const TodoItem = ({id, text, completed}) => {
 
 
   return (
-    <li style={{display:"flex", justifyContent:"space-between", backgroundColor:'lightgray'}} >
+   
+
+    <li style={{display:"flex", justifyContent:"space-between",backgroundColor:'lightgray'}} >
        <input type='checkbox'
          checked={completed}
        onChange={()=>dispatch(toggleTodoCompleted({id})) }
@@ -23,7 +25,8 @@ const TodoItem = ({id, text, completed}) => {
             </span>
       
         </li>
-  );
+  )
+    
 };
 
 export default TodoItem
