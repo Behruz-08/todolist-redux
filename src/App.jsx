@@ -5,6 +5,8 @@ import TodoList from "./components/TodoList"
 import InputField from './components/InputField'
 import { useDispatch } from 'react-redux'
 import { addTodo } from './slices/TodoSlice'
+import Navbar from './components/Navbar'
+
 
 function App() {
   const [text, setText] = useState('')
@@ -25,8 +27,12 @@ function App() {
 
   return (
     <>
+    <Navbar/>
+    <div style={{width:"100vw", height:'60vh', }}>
+
   <InputField text={text} handleInput={setText} handleSubmit={addTask}/>
    <TodoList />
+    </div>
 
     </>
   )
